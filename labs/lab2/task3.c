@@ -9,7 +9,7 @@ int main()
     float mass[col];
     
     printf("col = %d\n", col);
-    for (int i = col - 1; i >= 0; i--){
+    for (int i = 0; i < col; i++){
         mass[i] = (float)rand()/RAND_MAX;
     }
     
