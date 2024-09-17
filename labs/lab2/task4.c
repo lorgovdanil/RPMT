@@ -19,14 +19,14 @@ int main()
         mass[i] = arg1 + (float)rand()/RAND_MAX * (arg2 - arg1);
     }
     
-    puz(mass, col);
+    Sort(mass, col);
     
     for (int i = 0; i < col; i++){
         printf("[%d] = %f\n", i, mass[i]);
     }
     return 0;
 }
-void puz(float x[], int s){
+void Sort(float x[], int s){
     int stop;
     stop = 0;
     while(stop != 1){
