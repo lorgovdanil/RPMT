@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 
 int main()
 {
@@ -10,7 +9,7 @@ int main()
     file2 = fopen("work.txt", "a+");
     
     char str[256];
-    scanf("%s", str);
+    scanf("%[^\n]%*c", str);
     
     char pr[256];
     fprintf(file2, "%s", str);
