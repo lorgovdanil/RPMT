@@ -21,8 +21,6 @@ int main()
     
     fclose(file1);
     file1 = fopen("test.txt", "w");
-    fclose(file1);
-    file1 = fopen("test.txt", "a");
     
     while(fgets(pr, 256, file2) != NULL){
         fprintf(file1, "%s", pr);
