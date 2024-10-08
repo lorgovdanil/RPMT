@@ -9,7 +9,7 @@ int main()
     scanf("%s", name);
     file2 = fopen(name, "w");
     
-    file1 = fopen("test.txt", "r");
+    file1 = fopen("text.txt", "r");
     char str[256];
     for(int i = 0; i < 3; i = i + 1){
         fgets(str, 256, file1);
