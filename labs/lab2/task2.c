@@ -9,12 +9,14 @@ int main()
     int mass[col];
     
     printf("col = %d\n", col);
-    for (int i = col - 1; i >= 0; i--){
+    for (int i = 0; i < col; i++){
         mass[i] = rand()%100;
     }
-    
-    for (int i = 0; i < col; i++){
-        printf("[%d] = %d\n", i, mass[i]);
+    FILE *file;
+    file = fopen("file", "a");
+    for (int i = col - 1; i >= 0; i--){
+        fprintf(file,"%d\n", mass[i]);
     }
+    fclose(file);
     return 0;
 }
