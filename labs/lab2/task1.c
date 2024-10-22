@@ -9,7 +9,7 @@ int main()
     int mass[col];
     
     for (int i = 0; i < col; i++){
-        mass[i] = rand()%100;
+        mass[i] = rand()%100 - 50;
     }
     
     for (int i = 0; i < col; i++){
