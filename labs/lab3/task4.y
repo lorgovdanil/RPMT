@@ -8,23 +8,23 @@ int main(int argc, char** argv);
 %union {
     float floatVal;
 }
-%token <floatVal> NUMBER
+%token <floatVal> DIGIT
 %token PLUS MINUS MULT DIV
 %token OPENBRACK CLOSEBRACK
 %token END
 %%
 expression: %empty
-    | expression exp END { printf("\n"); }
+    | expression expr END { printf("\n"); }
     ;
-exp: term
-    | exp PLUS term    { printf("+ "); }
-    | exp MINUS term    { printf("- "); }
+expr: term
+    | expr PLUS term    { printf("+ "); }
+    | expr MINUS term    { printf("- "); }
     ;
 term: factor
     | term MULT factor { printf("* "); }
     | term DIV factor  { printf("/ "); }
-factor: NUMBER  { printf("%f ", $1); }
-    | OPENBRACK exp CLOSEBRACK {}
+factor: DIGIT  { printf("%f ", $1); }
+    | OPENBRACK expr CLOSEBRACK {}
     ;
 %%
 void yyerror(char* str) {
