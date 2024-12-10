@@ -2,7 +2,7 @@
 #include "task3.tab.h"
 %}
 %%
-[0-9]+  { yylval = atoi(yytext); return NUMBER; }
+[0-9]+  { yylval = atoi(yytext); return DIGIT; }
 "+"     { return PLUS; }
 "-"     { return MINUS; }
 "*"     { return MULT; }
