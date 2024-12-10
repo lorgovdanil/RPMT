@@ -3,7 +3,7 @@
 #include <stdlib.h>
 %}
 %%
-[0-9]+(\.[0-9]+)	{ yylval.floatVal = atof(yytext); return NUMBER; }
+[0-9]+(\.[0-9]+)	{ yylval.floatVal = atof(yytext); return DIGIT; }
 "+"	{ return PLUS; }
 "-"     { return MINUS; }
 "*"     { return MULT; }
