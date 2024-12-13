@@ -1,0 +1,10 @@
+// Symbol table
+// Scope level 0:
+//	Symbol Name       Page Address
+//	----------------  ------------
+//	START             3000
+//	READ              3004
+//	PRINT             300B
+//	INPUT_MSG         300E
+//	BUFFER            301F
+
