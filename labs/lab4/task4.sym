@@ -1,0 +1,23 @@
+// Symbol table
+// Scope level 0:
+//	Symbol Name       Page Address
+//	----------------  ------------
+//	MUL_LOOP          3010
+//	MUL_DONE          3015
+//	DIV_L             301A
+//	DIV_D             3021
+//	PRINT_DEC         3025
+//	DIGIT_LOOP        302A
+//	DIGIT_DONE        302F
+//	OUTPUT_LOOP       3038
+//	NUM1              303D
+//	NUM2              303E
+//	ASCII_OFFSET      303F
+//	TEN               3040
+//	BUFFER            3041
+//	SUM_MSG           304B
+//	SUB_MSG           3051
+//	MUL_MSG           3057
+//	DIV_MSG           305D
+//	EOL               3063
+
