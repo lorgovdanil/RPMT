@@ -40,27 +40,29 @@ expr: NUM { $$ = $1; }
     ;
 
 if_stmt: IF OPEN_PAREN cond CLOSE_PAREN OPEN_BRACE stmts CLOSE_BRACE
-       { printf("BRzp IFEND\n"); }
+       { printf("\n"); }
        ;
 
 while_stmt: WHILE OPEN_PAREN cond CLOSE_PAREN OPEN_BRACE stmts CLOSE_BRACE
-          { printf("BRzp WHILEEND\n"); }
+          { printf("BRpzn WHILE\n"); }
+          { printf("\n"); }
           ;
 
 for_stmt: FOR OPEN_PAREN equal_stmt SEMICOLON cond SEMICOLON expr CLOSE_PAREN OPEN_BRACE stmts CLOSE_BRACE
-        { printf("BRzp FOREND\n"); }
+        { printf("BRpzn FOR\n"); }
+        { printf("\n"); }
         ;
 
 print_stmt: PRINT OPEN_PAREN VARIABLE CLOSE_PAREN { printf("LD RO, R1, #0\nOUT\n"); }
 
 cond: VARIABLE MT NUM
-    { printf("LD R1, X\nLD R2, #%d\nADD R3, R1, R2\nBRp TRUE\n", -$3); }
+    { printf("LD R1, X\nLD R2, #%d\nADD R3, R1, R2\nBRzn END\n", -$3); }
     | VARIABLE EQUAL NUM
-    { printf("LD R1, X\nLD R2, #%d\nNOT R2, R2\nADD R2, R2, #1\nADD R3, R1, R2\nBRz TRUE\n", $3); }
+    { printf("LD R1, X\nLD R2, #%d\nNOT R2, R2\nADD R2, R2, #1\nADD R3, R1, R2\nBRpn END\n", $3); }
     | VARIABLE LT NUM
-    { printf("LD R1, X\nLD R2, #%d\nADD R3, R1, R2\nBRn TRUE\n", -$3); }
+    { printf("LD R1, X\nLD R2, #%d\nADD R3, R1, R2\nBRpz END\n", -$3); }
     | VARIABLE NEQ NUM
-    { printf("LD R1, X\nLD R2, #%d\nNOT R2, R2\nADD R2, R2, #1\nADD R3, R1, R2\nBRnp TRUE\n", $3); }
+    { printf("LD R1, X\nLD R2, #%d\nNOT R2, R2\nADD R2, R2, #1\nADD R3, R1, R2\nBRz END\n", $3); }
     ;
 
 %%
