@@ -1,0 +1,45 @@
+// Symbol table
+
+// Scope level 0:
+
+//	Symbol Name       Page Address
+
+//	----------------  ------------
+
+//	READ_LOOP         3006
+
+//	CONVERT           300E
+
+//	CONVERT_LOOP      3013
+
+//	BUBBLE_SORT       301C
+
+//	OUTER_LOOP        301E
+
+//	INNER_LOOP        3022
+
+//	SKIP_SWAP         3028
+
+//	SWAP              302C
+
+//	OUTPUT_LOOP       302F
+
+//	PRINT_LOOP        3031
+
+//	END               303C
+
+//	INIT              303D
+
+//	MSG               303E
+
+//	NEWLINE           304D
+
+//	ASCII_ZERO        304F
+
+//	NEG_ASCII_ZERO    3050
+
+//	ARRAY             3051
+
+//	ARRAY_LEN         3056
+
+//	BUFFER            3057
