@@ -24,6 +24,7 @@ PRINT
         
         HALT
 
+; Данные 
 INPUT_MSG .STRINGZ "Enter a string: "
 BUFFER    .BLKW  50            ; буфер для хранения строки
 
