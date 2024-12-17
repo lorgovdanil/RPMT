@@ -98,7 +98,7 @@ PRINT_LOOP
 END
     HALT
 
-; Константы и данные
+; Данные
 INIT .FILL #0
 MSG .STRINGZ "Enter string: "
 NEWLINE .STRINGZ "\n"
